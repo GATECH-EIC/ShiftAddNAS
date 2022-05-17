@@ -1,0 +1,17 @@
+encoder-embed-dim-subtransformer: 512
+decoder-embed-dim-subtransformer: 512
+
+encoder-ffn-embed-dim-all-subtransformer: [1024, 1024, 1024, 4096, 3072, 4096]
+decoder-ffn-embed-dim-all-subtransformer: [4096]
+
+encoder-layer-num-subtransformer: 6
+decoder-layer-num-subtransformer: 1
+
+encoder-self-attention-heads-all-subtransformer: [8, 8, 16, 8, 4, 16]
+decoder-self-attention-heads-all-subtransformer: [8]
+decoder-ende-attention-heads-all-subtransformer: [4]
+
+decoder-arbitrary-ende-attn-all-subtransformer: [2]
+
+encoder-block-types-all-subtransformer: [self_attention+lightweight_add, self_attention+lightweight_shiftadd, self_attention, self_attention+lightweight_add, self_attention+lightweight_shiftadd, self_attention]
+decoder-block-types-all-subtransformer: [self_attention, self_attention+lightweight_shiftadd, self_attention+lightweight_shiftadd, self_attention+lightweight_add, self_attention+lightweight_conv, self_attention+lightweight_shiftadd]

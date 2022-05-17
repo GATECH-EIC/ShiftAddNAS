@@ -1,0 +1,37 @@
+encoder-embed-dim-subtransformer: 512
+decoder-embed-dim-subtransformer: 512
+
+encoder-ffn-embed-dim-all-subtransformer: [2048, 3072, 1024, 3072, 1024, 2048]
+decoder-ffn-embed-dim-all-subtransformer: [3072, 1024, 1024]
+
+encoder-layer-num-subtransformer: 6
+decoder-layer-num-subtransformer: 3
+
+encoder-self-attention-heads-all-subtransformer: [4, 4, 4, 4, 4, 8]
+decoder-self-attention-heads-all-subtransformer: [4, 4, 4]
+decoder-ende-attention-heads-all-subtransformer: [8, 8, 4]
+
+# for arbitrary encoder decoder attention. -1 means attending to last one encoder layer
+# 1 means last two encoder layers, 2 means last three encoder layers
+decoder-arbitrary-ende-attn-all-subtransformer: [1, 1, -1]
+
+encoder-block-types-all-subtransformer: [self_attention, lightweight_add, self_attention, self_attention, self_attention, self_attention]
+decoder-block-types-all-subtransformer: [self_attention, self_attention, self_attention]
+
+# Start Iteration 25:
+# Iteration 25, Lowest loss: 2.393926010604942
+# Config for lowest loss model:
+#   {'encoder':
+#   {'encoder_embed_dim': 512,
+#   'encoder_layer_num': 6,
+#   'encoder_ffn_embed_dim': [2048, 3072, 1024, 3072, 1024, 2048],
+#   'encoder_self_attention_heads': [4, 4, 4, 4, 4, 8],
+#   'encoder_block_types': ['lightweight_add', 'lightweight_shiftadd', 'self_attention+lightweight_add', 'self_attention+lightweight_shiftadd', 'lightweight_conv', 'self_attention+lightweight_conv']},
+#   'decoder': {'decoder_embed_dim': 512,
+#   'decoder_layer_num': 3,
+#   'decoder_ffn_embed_dim': [3072, 1024, 1024, 1024, 1024, 3072],
+#   'decoder_self_attention_heads': [4, 4, 4, 4, 4, 4],
+#   'decoder_ende_attention_heads': [8, 8, 4, 8, 8, 4],
+#   'decoder_arbitrary_ende_attn': [1, 1, -1, -1, 2, -1],
+#   'decoder_block_types': ['self_attention+lightweight_shiftadd', 'self_attention', 'lightweight_add', 'lightweight_add', 'self_attention+lightweight_shiftadd', 'self_attention+lightweight_conv']}}
+# Predicted latency for lowest loss model: 127.12020874023438

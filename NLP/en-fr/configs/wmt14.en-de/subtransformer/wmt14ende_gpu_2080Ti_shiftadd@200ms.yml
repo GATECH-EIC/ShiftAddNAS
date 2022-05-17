@@ -1,0 +1,35 @@
+encoder-embed-dim-subtransformer: 640
+decoder-embed-dim-subtransformer: 512
+
+encoder-ffn-embed-dim-all-subtransformer: [2048, 1024, 3072, 2048, 2048, 2048]
+decoder-ffn-embed-dim-all-subtransformer: [2048, 1024, 2048]
+
+encoder-layer-num-subtransformer: 6
+decoder-layer-num-subtransformer: 3
+
+encoder-self-attention-heads-all-subtransformer: [8, 4, 4, 8, 4, 8]
+decoder-self-attention-heads-all-subtransformer: [4, 4, 4]
+decoder-ende-attention-heads-all-subtransformer: [4, 8, 8]
+
+decoder-arbitrary-ende-attn-all-subtransformer: [1, 2, 2]
+
+encoder-block-types-all-subtransformer: [self_attention, self_attention+lightweight_shiftadd, self_attention, self_attention+lightweight_conv, self_attention, self_attention+lightweight_shiftadd]
+decoder-block-types-all-subtransformer: [self_attention+lightweight_add, self_attention+lightweight_conv, lightweight_add, self_attention+lightweight_conv, self_attention, self_attention+lightweight_add]
+
+# Iteration 29, Lowest loss: 2.653275168316208
+# Config for lowest loss model:
+#   {'encoder':
+#     {'encoder_embed_dim': 640,
+#     'encoder_layer_num': 6,
+#     'encoder_ffn_embed_dim': [2048, 1024, 3072, 2048, 2048, 2048],
+#     'encoder_self_attention_heads': [8, 4, 4, 8, 4, 8],
+#     'encoder_block_types': ['self_attention', 'self_attention+lightweight_shiftadd', 'self_attention', 'self_attention+lightweight_conv', 'self_attention', 'self_attention+lightweight_shiftadd']},
+#     'decoder':
+#       {'decoder_embed_dim': 512,
+#       'decoder_layer_num': 3,
+#       'decoder_ffn_embed_dim': [2048, 1024, 2048, 3072, 3072, 1024],
+#       'decoder_self_attention_heads': [4, 4, 4, 4, 4, 4],
+#       'decoder_ende_attention_heads': [4, 8, 8, 4, 4, 8],
+#       'decoder_arbitrary_ende_attn': [1, 2, 2, -1, 2, 1],
+#       'decoder_block_types': ['self_attention+lightweight_add', 'self_attention+lightweight_conv', 'lightweight_add', 'self_attention+lightweight_conv', 'self_attention', 'self_attention+lightweight_add']}}
+# Predicted latency for lowest loss model: 118.31381320953369

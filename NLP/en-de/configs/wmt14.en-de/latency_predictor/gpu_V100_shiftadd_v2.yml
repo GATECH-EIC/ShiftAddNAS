@@ -1,0 +1,11 @@
+lat-dataset-path: ./latency_dataset/wmt14ende_gpu_V100_shiftadd_v2.csv
+feature-norm: [640, 6, 2048, 6, 640, 6, 2048, 6, 6, 2]
+lat-norm: 200
+feature-dim: 94 # 10 + 6*7*2
+new-feature-dim: 12
+hidden-dim: 400
+hidden-layer-num: 3
+ckpt-path: ./latency_dataset/predictors/wmt14ende_gpu_V100_shiftadd_v2.pt
+train-steps: 5000
+bsz: 128
+lr: 1e-5

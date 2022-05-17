@@ -1,0 +1,26 @@
+encoder-embed-dim-subtransformer: 1024
+decoder-embed-dim-subtransformer: 768
+
+encoder-ffn-embed-dim-all-subtransformer: [4096, 4096, 3072, 4096, 2048, 4096]
+decoder-ffn-embed-dim-all-subtransformer: [4096, 3072, 4096]
+
+encoder-layer-num-subtransformer: 6
+decoder-layer-num-subtransformer: 3
+
+encoder-self-attention-heads-all-subtransformer: [4, 8, 8, 8, 4, 4]
+decoder-self-attention-heads-all-subtransformer: [4, 4, 8]
+decoder-ende-attention-heads-all-subtransformer: [4, 4, 16]
+
+decoder-arbitrary-ende-attn-all-subtransformer: [2, 2, -1]
+
+encoder-block-types-all-subtransformer: [lightweight_conv, self_attention+lightweight_shiftadd, self_attention, self_attention, lightweight_shiftadd, lightweight_add]
+decoder-block-types-all-subtransformer: [self_attention+lightweight_shiftadd, self_attention+lightweight_shiftadd, self_attention+lightweight_shiftadd, self_attention, self_attention+lightweight_shiftadd, self_attention+lightweight_add]
+
+# | Iteration 9, Lowest obj: 4.718827177435413, Loss: 7.749796153457361, Flops: 0.5311303854, Latency: 2.4998385906219482                                        
+# | Config for lowest loss model: {'encoder': {'encoder_embed_dim': 1024, 'encoder_layer_num': 6, 'encoder_ffn_embed_dim': [4096, 4096, 3072, 4096, 2048, 4096], 'encoder_self
+# _attention_heads': [4, 8, 8, 8, 4, 4], 'encoder_block_types': ['lightweight_conv', 'self_attention+lightweight_shiftadd', 'self_attention', 'self_attention', 'lightweight_s
+# hiftadd', 'lightweight_add']}, 'decoder': {'decoder_embed_dim': 768, 'decoder_layer_num': 3, 'decoder_ffn_embed_dim': [4096, 3072, 4096, 4096, 3072, 1024], 'decoder_self_at
+# tention_heads': [4, 4, 8, 8, 16, 16], 'decoder_ende_attention_heads': [4, 4, 16, 8, 4, 4], 'decoder_arbitrary_ende_attn': [2, 2, -1, 1, 1, 1], 'decoder_block_types': ['self
+# _attention+lightweight_shiftadd', 'self_attention+lightweight_shiftadd', 'self_attention+lightweight_shiftadd', 'self_attention', 'self_attention+lightweight_shiftadd', 'se
+# lf_attention+lightweight_add']}}                                                                                                                           
+# | Predicted latency for lowest loss model: 249.98385906219482

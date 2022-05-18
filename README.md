@@ -5,7 +5,7 @@
 **Haoran You**, Baopu Li, Huihong Shi, Yonggan Fu, Yingyan Lin
 
 Accepted by [ICML 2022](https://icml.cc/). More Info:
-\[ [**Paper**]() | [**Slide**]() | [**Youtube**]() | [**Github**](https://github.com/RICE-EIC/ShiftAddNAS) \]
+\[ [**Paper**](https://arxiv.org/abs/2205.08119) | [**Slide**]() | [**Youtube**]() | [**Github**](https://github.com/RICE-EIC/ShiftAddNAS) \]
 
 ---
 ## Usages
